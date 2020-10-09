@@ -1,0 +1,41 @@
+<header>
+    <form (ngSubmit)='addBricks(bricks.value)' [formGroup]='bricks'>
+        <div>Line:</div>
+        <select formControlName="line">
+            <option disabled selected value="">↓</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <div>Range:</div>
+        <select formControlName="start">
+            <option disabled selected value="">↓</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <select formControlName="end">
+            <option disabled selected value="">↓</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <button [disabled]='!bricks.valid || bricks.value.start > bricks.value.end' type="submit">Add</button>
+        <button type="button" (click)="reset()">Reset</button>
+    </form>
+</header>
