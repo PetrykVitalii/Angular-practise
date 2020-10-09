@@ -49,4 +49,5 @@ export class HeaderComponent implements OnInit {
     this.bricksService.newBricks(newArrBricks)
     this.getBricks()
   }
+  
 }
